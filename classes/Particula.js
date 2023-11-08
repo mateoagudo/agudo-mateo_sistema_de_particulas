@@ -10,7 +10,7 @@ class Particula {
     this.vel = createVector(0, random(3, 5));
     this.vel.rotate(random(155, 205));
 
-    this.acel = createVector(random(-0.1, 0.1), 0.05);
+    this.acel = createVector(random(-0.01, 0.01), 0.05);
     this.color = color(255, random(100, 200), 50, 50);
     this.exp = color(random(50, 200), 50, random(200, 255), 70);
   }
