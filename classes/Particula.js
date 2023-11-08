@@ -1,17 +1,18 @@
 class Particula {
   constructor() {
-    this.tamanoInicial = random(10, 50);
+    this.tamanoInicial = random(25, 75);
     this.tamano = this.tamanoInicial;
     this.estaMuerta = false;
-    this.tiempoDeVidaInicial = Math.ceil(random(10, 100));
+    this.tiempoDeVidaInicial = Math.ceil(random(150, 200));
     this.tiempoDeVida = this.tiempoDeVidaInicial;
 
     this.pos = createVector(mouseX, mouseY);
     this.vel = createVector(0, random(3, 5));
-    this.vel.rotate(random(180));
+    this.vel.rotate(random(155, 205));
 
-    this.acel = createVector(0, -0.01);
+    this.acel = createVector(0.001, 0.05);
     this.color = color(255, random(100, 200), 50, 50);
+    this.exp = color(random(50, 200), 50, random(200, 255), 70);
   }
   // Metodo ==> method update
   update() {
@@ -29,6 +30,9 @@ class Particula {
     this.tiempoDeVida -= 1;
     if (this.tiempoDeVida <= 0) {
       this.estaMuerta = true;
+      noFill();
+      stroke(this.exp);
+      circle(this.pos.x, this.pos.y, this.tamanoInicial);
     }
   }
 
