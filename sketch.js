@@ -1,9 +1,11 @@
 let sistema = [];
+// let col;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   // p = new Particula();
+  // col = color(random(50, 200), 50, random(200, 255), 70);
 }
 
 function draw() {
@@ -29,9 +31,7 @@ function draw() {
 
 // function mousePressed() {
 //   for (let i = 0; i < 10; i++) {
-//     let p = new Particula();
+//     let p = new Particula(col);
 //     sistema.push(p);
-//     sistema[i].update();
-//     sistema[i].display();
 //   }
 // }
