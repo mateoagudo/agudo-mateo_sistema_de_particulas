@@ -6,13 +6,6 @@ function setup() {
   // p = new Particula();
 }
 
-function mousePressed() {
-  let p = new Particula();
-  sistema.push(p);
-  sistema[i].update();
-  sistema[i].display();
-}
-
 function draw() {
   // if (!p.estaMuerta) {
   //   p.update();
@@ -33,3 +26,12 @@ function draw() {
     sistema[i].display();
   }
 }
+
+// function mousePressed() {
+//   for (let i = 0; i < 10; i++) {
+//     let p = new Particula();
+//     sistema.push(p);
+//     sistema[i].update();
+//     sistema[i].display();
+//   }
+// }
